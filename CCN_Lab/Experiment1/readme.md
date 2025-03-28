@@ -1,4 +1,5 @@
-Aim : Familiarisation of Networking commands and config files
+# Aim
+Familiarisation of Networking commands and config files
 
 # Commands
 - ipaddr : set or display the IP address and netmask of a network interface.

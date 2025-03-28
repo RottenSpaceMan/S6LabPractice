@@ -1,4 +1,5 @@
-Aim : To familiarize and understand the use and functioning of system calls used for programming in linux
+# Aim
+To familiarize and understand the use and functioning of system calls used for programming in linux
 
 Tip : IF YOU FORGET SOME IN THE MIDDLE OF EXAMS, you can type `man <thing>` for a detailed explanation for most things
 `man man` to know more about the manual

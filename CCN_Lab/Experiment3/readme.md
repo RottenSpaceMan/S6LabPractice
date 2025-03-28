@@ -1,6 +1,8 @@
-Aim : Implementation of Client-Server communication using Socket Programming and TCP as transport layer protocol.
+# Aim
+Implementation of Client-Server communication using Socket Programming and TCP as transport layer protocol.
 
-Objective : Client sends a string to the server using TCP. The server reverses the string and returns it to the client.
+# Objective
+Client sends a string to the server using TCP. The server reverses the string and returns it to the client.
 
 # Theory
 ## Steps For Client
