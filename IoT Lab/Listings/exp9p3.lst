@@ -1,0 +1,40 @@
+C51 COMPILER V9.60.7.0   EXP9P3                                                            03/31/2025 18:08:17 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE EXP9P3
+OBJECT MODULE PLACED IN .\Objects\exp9p3.obj
+COMPILER INVOKED BY: C:\users\rotten\Desktop\C51\BIN\C51.exe Experiment9\exp9p3.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTE
+                    -XTEND PRINT(.\Listings\exp9p3.lst) TABS(2) OBJECT(.\Objects\exp9p3.obj)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          void main(){
+   3   1        unsigned char str[] = "YES", i;
+   4   1        TMOD = 0x20;
+   5   1        TH1 = 0xFA;
+   6   1        TL1 = 0xFA;
+   7   1        TR1 = 1;
+   8   1        SCON = 0x50;
+   9   1        for(i = 0; i < 3; i = (i + 1) % 3){
+  10   2          SBUF = str[i];
+  11   2          while(TI == 0);
+  12   2          TI = 0;
+  13   2        }
+  14   1        TR1 = 0;
+  15   1        TF1 = 0;
+  16   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     76    ----
+   CONSTANT SIZE    =      4    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       4
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,56 @@
+A51 MACRO ASSEMBLER  EXP3P1                                                               03/31/2025 14:29:32 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\exp3p1.obj
+ASSEMBLER INVOKED BY: C:\users\rotten\Desktop\C51\BIN\A51.EXE Experiment3\exp3p1.asm SET(SMALL) DEBUG PRINT(.\Listings\e
+                      xp3p1.lst) OBJECT(.\Objects\exp3p1.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000 C3                1     CLR C
+0001 7C00              2     MOV R4, #00H
+0003 904200            3     MOV DPTR, #4200H
+0006 E0                4     MOVX A, @DPTR
+0007 F8                5     MOV R0, A
+0008 A3                6     INC DPTR
+0009 E0                7     MOVX A, @DPTR
+000A F9                8     MOV R1, A
+000B A3                9     INC DPTR
+000C E0               10     MOVX A, @DPTR
+000D FA               11     MOV R2, A
+000E A3               12     INC DPTR
+000F E0               13     MOVX A, @DPTR
+0010 FB               14     MOV R3, A
+0011 E8               15     MOV A, R0
+0012 2A               16     ADD A, R2
+0013 904204           17     MOV DPTR, #4204H
+0016 F0               18     MOVX @DPTR, A
+0017 E9               19     MOV A, R1
+0018 3B               20     ADDC A, R3
+0019 5001             21     JNC HERE
+001B 0C               22     INC R4
+001C                  23     HERE:
+001C A3               24             INC DPTR
+001D F0               25             MOVX @DPTR, A
+001E A3               26             INC DPTR
+001F EC               27             MOV A, R4
+0020 F0               28             MOVX @DPTR, A
+0021 80FE             29     NOW: SJMP NOW
+                      30     END
+A51 MACRO ASSEMBLER  EXP3P1                                                               03/31/2025 14:29:32 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+HERE . . . . . . .  C ADDR   001CH   A   
+NOW. . . . . . . .  C ADDR   0021H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

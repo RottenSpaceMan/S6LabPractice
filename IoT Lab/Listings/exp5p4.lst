@@ -1,0 +1,51 @@
+A51 MACRO ASSEMBLER  EXP5P4                                                               03/31/2025 16:19:33 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\exp5p4.obj
+ASSEMBLER INVOKED BY: C:\users\rotten\Desktop\C51\BIN\A51.EXE Experiment5\exp5p4.asm SET(SMALL) DEBUG PRINT(.\Listings\e
+                      xp5p4.lst) OBJECT(.\Objects\exp5p4.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 759000            2             MOV P1, #00H
+0003 7499              3             MOV A, #99H
+0005                   4             LOOP:
+0005 110E              5                     ACALL DELAY
+0007 2499              6                     ADD A, #99H
+0009 D4                7                     DA A
+000A F590              8                     MOV P1, A
+000C 70F7              9                     JNZ LOOP
+000E                  10             DELAY:
+000E 79FF             11                     MOV R1, #0FFH
+0010                  12                     DEC1:
+0010 7AFF             13                             MOV R2, #0FFH
+0012                  14                             DEC2:
+0012 7BFF             15                                     MOV R3, #0FFH
+0014                  16                                     DEC3:
+0014 DBFE             17                                             DJNZ R3, DEC3
+0016 DAFA             18                                     DJNZ R2, DEC2
+0018 D9F6             19                             DJNZ R1, DEC1
+001A 22               20             RET
+                      21     END
+A51 MACRO ASSEMBLER  EXP5P4                                                               03/31/2025 16:19:33 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+DEC1 . . . . . . .  C ADDR   0010H   A   
+DEC2 . . . . . . .  C ADDR   0012H   A   
+DEC3 . . . . . . .  C ADDR   0014H   A   
+DELAY. . . . . . .  C ADDR   000EH   A   
+LOOP . . . . . . .  C ADDR   0005H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

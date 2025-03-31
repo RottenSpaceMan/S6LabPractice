@@ -1,0 +1,47 @@
+A51 MACRO ASSEMBLER  EXP4P2                                                               03/31/2025 15:17:42 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\exp4p2.obj
+ASSEMBLER INVOKED BY: C:\users\rotten\Desktop\C51\BIN\A51.EXE Experiment4\exp4p2.asm SET(SMALL) DEBUG PRINT(.\Listings\e
+                      xp4p2.lst) OBJECT(.\Objects\exp4p2.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000 7425              1     MOV A, #25H
+0002 75F012            2     MOV B, #12H
+0005 25F0              3     ADD A, B
+0007 F540              4     MOV 40H, A
+0009 7425              5     MOV A, #25H
+000B 95F0              6     SUBB A, B
+000D F541              7     MOV 41H, A
+000F 7425              8     MOV A, #25H
+0011 A4                9     MUL AB
+0012 F542             10     MOV 42H, A
+0014 F543             11     MOV 43H, A
+0016 7425             12     MOV A, #25H
+0018 84               13     DIV AB
+0019 F544             14     MOV 44H, A
+001B F545             15     MOV 45H, A
+001D 7425             16     MOV A, #25H
+001F 04               17     INC A
+0020 F546             18     MOV 46H, A
+0022 7425             19     MOV A, #25H
+0024 14               20     DEC A
+0025 F547             21     MOV 47H, A
+                      22     END
+A51 MACRO ASSEMBLER  EXP4P2                                                               03/31/2025 15:17:42 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

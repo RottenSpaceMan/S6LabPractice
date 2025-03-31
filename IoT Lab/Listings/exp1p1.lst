@@ -1,0 +1,58 @@
+A51 MACRO ASSEMBLER  EXP1P1                                                               03/31/2025 13:36:08 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\exp1p1.obj
+ASSEMBLER INVOKED BY: C:\users\rotten\Desktop\C51\BIN\A51.EXE Experiment2\exp1p1.asm SET(SMALL) DEBUG PRINT(.\Listings\e
+                      xp1p1.lst) OBJECT(.\Objects\exp1p1.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000 904500            1     MOV DPTR, #4500H
+0003 E0                2     MOVX A, @DPTR
+0004 F8                3     MOV R0, A
+0005 18                4     DEC R0
+0006                   5     OUTER_LOOP:
+0006 E8                6             MOV A, R0
+0007 F9                7             MOV R1, A
+0008 904501            8             MOV DPTR, #4501H
+000B                   9             INNER_LOOP:
+000B E0               10                     MOVX A, @DPTR
+000C F5F0             11                     MOV B,A
+000E A3               12                     INC DPTR
+000F E0               13                     MOVX A, @DPTR
+0010 B5F002           14                     CJNE A, B, EQUAL
+0013 800A             15                     SJMP LOOP
+0015                  16                     EQUAL:
+0015 5008             17                             JNC LOOP
+0017 1582             18                             DEC DPL
+0019 F0               19                             MOVX @DPTR, A
+001A E5F0             20                             MOV A, B
+001C 0582             21                             INC DPL
+001E F0               22                             MOVX @DPTR, A
+001F                  23                             LOOP:
+001F D9EA             24                                     DJNZ R1, INNER_LOOP
+0021 D8E3             25                                     DJNZ R0, OUTER_LOOP
+0023 80FE             26     HERE: SJMP HERE
+                      27     END
+A51 MACRO ASSEMBLER  EXP1P1                                                               03/31/2025 13:36:08 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+DPL. . . . . . . .  D ADDR   0082H   A   
+EQUAL. . . . . . .  C ADDR   0015H   A   
+HERE . . . . . . .  C ADDR   0023H   A   
+INNER_LOOP . . . .  C ADDR   000BH   A   
+LOOP . . . . . . .  C ADDR   001FH   A   
+OUTER_LOOP . . . .  C ADDR   0006H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

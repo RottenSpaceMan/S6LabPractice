@@ -1,0 +1,49 @@
+A51 MACRO ASSEMBLER  EXP7P1                                                               03/31/2025 17:26:41 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\exp7p1.obj
+ASSEMBLER INVOKED BY: C:\users\rotten\Desktop\C51\BIN\A51.EXE Experiment7\exp7p1.asm SET(SMALL) DEBUG PRINT(.\Listings\e
+                      xp7p1.lst) OBJECT(.\Objects\exp7p1.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000                   2             MAIN:
+0000 758055            3                     MOV P0, #55H
+0003 110C              4                     ACALL DELAY
+0005 7580AA            5                     MOV P0, #0AAH
+0008 110C              6                     ACALL DELAY
+000A 80F4              7                     SJMP MAIN
+000C                   8             DELAY:
+000C 780F              9                     MOV R0, #0FH
+000E                  10                     DEC1:
+000E 79FF             11                             MOV R1, #0FFH
+0010                  12                             DEC2:
+0010 7AFF             13                                     MOV R2, #0FFH
+0012                  14                                     DEC3:
+0012 DAFE             15                                             DJNZ R2, DEC3
+0014 D9FA             16                                     DJNZ R1, DEC2
+0016 D8F6             17                             DJNZ R0, DEC1
+0018 22               18             RET
+                      19     END
+A51 MACRO ASSEMBLER  EXP7P1                                                               03/31/2025 17:26:41 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+DEC1 . . . . . . .  C ADDR   000EH   A   
+DEC2 . . . . . . .  C ADDR   0010H   A   
+DEC3 . . . . . . .  C ADDR   0012H   A   
+DELAY. . . . . . .  C ADDR   000CH   A   
+MAIN . . . . . . .  C ADDR   0000H   A   
+P0 . . . . . . . .  D ADDR   0080H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

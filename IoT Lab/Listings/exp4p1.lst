@@ -1,0 +1,44 @@
+A51 MACRO ASSEMBLER  EXP4P1                                                               03/31/2025 15:14:53 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\exp4p1.obj
+ASSEMBLER INVOKED BY: C:\users\rotten\Desktop\C51\BIN\A51.EXE Experiment4\exp4p1.asm SET(SMALL) DEBUG PRINT(.\Listings\e
+                      xp4p1.lst) OBJECT(.\Objects\exp4p1.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 7B00              2             MOV R3, #00H
+0002 904200            3             MOV DPTR, #4200H
+0005 E0                4             MOVX A, @DPTR
+0006 FC                5             MOV R4, A
+0007 A3                6             INC DPTR
+0008 E0                7             MOVX A, @DPTR
+0009 2C                8             ADD A, R4
+000A 5001              9             JNC XX
+000C 0B               10             INC R3
+000D                  11             XX:
+000D A3               12                     INC DPTR
+000E F0               13                     MOVX @DPTR, A
+000F EB               14                     MOV A, R3
+0010 A3               15                     INC DPTR
+0011 F0               16                     MOVX @DPTR, A
+0012 80FE             17     HERE: SJMP HERE
+                      18     END
+A51 MACRO ASSEMBLER  EXP4P1                                                               03/31/2025 15:14:53 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+HERE . . . . . . .  C ADDR   0012H   A   
+XX . . . . . . . .  C ADDR   000DH   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

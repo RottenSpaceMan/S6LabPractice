@@ -1,0 +1,51 @@
+A51 MACRO ASSEMBLER  EXP6P2                                                               03/31/2025 17:21:40 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\exp6p2.obj
+ASSEMBLER INVOKED BY: C:\users\rotten\Desktop\C51\BIN\A51.EXE Experiment6\exp6p2.asm SET(SMALL) DEBUG PRINT(.\Listings\e
+                      xp6p2.lst) OBJECT(.\Objects\exp6p2.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 904200            2             MOV DPTR, #4200H
+0003 E0                3             MOVX A, @DPTR
+0004 7800              4             MOV R0, #00H
+0006 7900              5             MOV R1, #00H
+0008 7A08              6             MOV R2, #08H
+000A                   7             COUNT_LOOP:
+000A 33                8                     RLC A
+000B 4003              9                     JC INCREMENT_ONES
+000D 09               10                     INC R1
+000E 8001             11                     SJMP NEXT_BIT
+0010                  12                     INCREMENT_ONES:
+0010 08               13                             INC R0
+0011                  14                     NEXT_BIT:
+0011 DAF7             15                             DJNZ R2, COUNT_LOOP
+0013 904201           16             MOV DPTR, #4201H
+0016 E8               17             MOV A, R0
+0017 F0               18             MOVX @DPTR, A
+0018 A3               19             INC DPTR
+0019 E9               20             MOV A, R1
+001A F0               21             MOVX @DPTR, A
+001B 80FE             22             HERE: SJMP HERE
+                      23     END
+A51 MACRO ASSEMBLER  EXP6P2                                                               03/31/2025 17:21:40 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+COUNT_LOOP . . . .  C ADDR   000AH   A   
+HERE . . . . . . .  C ADDR   001BH   A   
+INCREMENT_ONES . .  C ADDR   0010H   A   
+NEXT_BIT . . . . .  C ADDR   0011H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

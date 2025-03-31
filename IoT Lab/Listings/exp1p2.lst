@@ -1,0 +1,43 @@
+A51 MACRO ASSEMBLER  EXP1P2                                                               03/31/2025 13:25:01 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\exp1p2.obj
+ASSEMBLER INVOKED BY: C:\users\rotten\Desktop\C51\BIN\A51.EXE Experiment1\exp1p2.asm SET(SMALL) DEBUG PRINT(.\Listings\e
+                      xp1p2.lst) OBJECT(.\Objects\exp1p2.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000 7A05              1     MOV R2, #05H
+0002 904500            2     MOV DPTR, #4500H
+0005                   3     NEXT:
+0005 E0                4             MOVX A, @DPTR
+0006 F9                5             MOV R1, A
+0007 758346            6             MOV DPH, #46H
+000A E0                7             MOVX A, @DPTR
+000B C9                8             XCH A,R1
+000C F0                9             MOVX @DPTR, A
+000D 758345           10             MOV DPH, #45H
+0010 E9               11             MOV A, R1
+0011 F0               12             MOVX @DPTR, A
+0012 A3               13             INC DPTR
+0013 DAF0             14             DJNZ R2, NEXT
+0015 80FE             15     HERE: SJMP HERE
+                      16     END
+A51 MACRO ASSEMBLER  EXP1P2                                                               03/31/2025 13:25:01 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+DPH. . . . . . . .  D ADDR   0083H   A   
+HERE . . . . . . .  C ADDR   0015H   A   
+NEXT . . . . . . .  C ADDR   0005H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

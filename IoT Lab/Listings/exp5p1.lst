@@ -1,0 +1,51 @@
+A51 MACRO ASSEMBLER  EXP5P1                                                               03/31/2025 16:12:32 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\exp5p1.obj
+ASSEMBLER INVOKED BY: C:\users\rotten\Desktop\C51\BIN\A51.EXE Experiment5\exp5p1.asm SET(SMALL) DEBUG PRINT(.\Listings\e
+                      xp5p1.lst) OBJECT(.\Objects\exp5p1.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000h
+0000 759000            2             MOV P1, #00H
+0003                   3             LOOP:
+0003 110D              4                     ACALL DELAY
+0005 0590              5                     INC P1
+0007 E590              6                     MOV A, P1
+0009 70F8              7                     JNZ LOOP
+000B 80FE              8     HERE: SJMP HERE
+000D                   9     DELAY:
+000D 79FF             10             MOV R1, #0FFH
+000F                  11             DEC1:
+000F 7AFF             12                     MOV R2, #0FFH
+0011                  13                     DEC2:
+0011 7BFF             14                             MOV R3, #0FFH
+0013                  15                             DEC3:
+0013 DBFE             16                                     DJNZ R3, DEC3
+0015 DAFA             17                             DJNZ R2, DEC2
+0017 D9F6             18                     DJNZ R1, DEC1
+0019 22               19             RET
+                      20     END
+A51 MACRO ASSEMBLER  EXP5P1                                                               03/31/2025 16:12:32 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+DEC1 . . . . . . .  C ADDR   000FH   A   
+DEC2 . . . . . . .  C ADDR   0011H   A   
+DEC3 . . . . . . .  C ADDR   0013H   A   
+DELAY. . . . . . .  C ADDR   000DH   A   
+HERE . . . . . . .  C ADDR   000BH   A   
+LOOP . . . . . . .  C ADDR   0003H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

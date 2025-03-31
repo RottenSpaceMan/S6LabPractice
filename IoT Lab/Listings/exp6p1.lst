@@ -1,0 +1,34 @@
+A51 MACRO ASSEMBLER  EXP6P1                                                               03/31/2025 17:20:17 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\exp6p1.obj
+ASSEMBLER INVOKED BY: C:\users\rotten\Desktop\C51\BIN\A51.EXE Experiment6\exp6p1.asm SET(SMALL) DEBUG PRINT(.\Listings\e
+                      xp6p1.lst) OBJECT(.\Objects\exp6p1.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000 E521              1     MOV A, 21H
+0002 5522              2     ANL A, 22H
+0004 F530              3     MOV 30H, A
+0006 E521              4     MOV A, 21H
+0008 4522              5     ORL A, 22H
+000A F531              6     MOV 31H, A
+000C E521              7     MOV A, 21H
+000E 6522              8     XRL A, 22H
+0010 F532              9     MOV 32H, A
+                      10     END
+A51 MACRO ASSEMBLER  EXP6P1                                                               03/31/2025 17:20:17 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

@@ -1,0 +1,30 @@
+C51 COMPILER V9.60.7.0   EXP8P1                                                            03/31/2025 17:43:49 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE EXP8P1
+OBJECT MODULE PLACED IN .\Objects\exp8p1.obj
+COMPILER INVOKED BY: C:\users\rotten\Desktop\C51\BIN\C51.exe Experiment8\exp8p1.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTE
+                    -XTEND PRINT(.\Listings\exp8p1.lst) TABS(2) OBJECT(.\Objects\exp8p1.obj)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          void main(){
+   3   1        unsigned char bcd = 0x29;
+   4   1        P1 = ((bcd >> 4) & 0x0F) + '0';
+   5   1        P2 = (bcd&0x0F) + '0';
+   6   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     18    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

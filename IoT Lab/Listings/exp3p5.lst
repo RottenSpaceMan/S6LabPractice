@@ -1,0 +1,37 @@
+A51 MACRO ASSEMBLER  EXP3P5                                                               03/31/2025 14:55:05 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\exp3p5.obj
+ASSEMBLER INVOKED BY: C:\users\rotten\Desktop\C51\BIN\A51.EXE Experiment3\exp3p5.asm SET(SMALL) DEBUG PRINT(.\Listings\e
+                      xp3p5.lst) OBJECT(.\Objects\exp3p5.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000 904200            1     MOV DPTR, #4200H
+0003 E0                2     MOVX A, @DPTR
+0004 F5F0              3     MOV B, A
+0006 A4                4     MUL AB
+0007 904201            5     MOV DPTR, #4201H
+000A F0                6     MOVX @DPTR, A
+000B A3                7     INC DPTR
+000C E5F0              8     MOV A, B
+000E F0                9     MOVX @DPTR, A
+000F 80FE             10     HERE: SJMP HERE
+                      11     END
+A51 MACRO ASSEMBLER  EXP3P5                                                               03/31/2025 14:55:05 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+HERE . . . . . . .  C ADDR   000FH   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

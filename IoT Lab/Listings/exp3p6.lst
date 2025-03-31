@@ -1,0 +1,50 @@
+A51 MACRO ASSEMBLER  EXP3P6                                                               03/31/2025 15:13:10 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\exp3p6.obj
+ASSEMBLER INVOKED BY: C:\users\rotten\Desktop\C51\BIN\A51.EXE Experiment3\exp3p6.asm SET(SMALL) DEBUG PRINT(.\Listings\e
+                      xp3p6.lst) OBJECT(.\Objects\exp3p6.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000 904200            1     MOV DPTR, #4200H
+0003 E0                2     MOVX A, @DPTR
+0004 F5F0              3     MOV B, A
+0006 F9                4     MOV R1, A
+0007 A4                5     MUL AB
+0008 AAF0              6     MOV R2, B
+000A 89F0              7     MOV B, R1
+000C A4                8     MUL AB
+000D 904203            9     MOV DPTR, #4203H
+0010 F0               10     MOVX @DPTR, A
+0011 ABF0             11     MOV R3, B
+0013 8AF0             12     MOV B, R2
+0015 E9               13     MOV A, R1
+0016 A4               14     MUL AB
+0017 2B               15     ADD A, R3
+0018 1582             16     DEC DPL
+001A F0               17     MOVX @DPTR, A
+001B 7400             18     MOV A, #00H
+001D 35F0             19     ADDC A, B
+001F 1582             20     DEC DPL
+0021 F0               21     MOVX @DPTR, A
+0022 80FE             22     HERE: SJMP HERE
+                      23     END
+A51 MACRO ASSEMBLER  EXP3P6                                                               03/31/2025 15:13:10 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+DPL. . . . . . . .  D ADDR   0082H   A   
+HERE . . . . . . .  C ADDR   0022H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

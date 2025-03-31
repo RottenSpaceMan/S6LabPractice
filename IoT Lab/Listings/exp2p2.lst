@@ -1,0 +1,51 @@
+A51 MACRO ASSEMBLER  EXP2P2                                                               03/31/2025 13:46:14 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\exp2p2.obj
+ASSEMBLER INVOKED BY: C:\users\rotten\Desktop\C51\BIN\A51.EXE Experiment2\exp2p2.asm SET(SMALL) DEBUG PRINT(.\Listings\e
+                      xp2p2.lst) OBJECT(.\Objects\exp2p2.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000 904500            1     MOV DPTR, #4500H
+0003 E0                2     MOVX A,@DPTR
+0004 F8                3     MOV R0, A
+0005 18                4     DEC R0
+0006 A3                5     INC DPTR
+0007 E0                6     MOVX A, @DPTR
+0008 F5F0              7     MOV B, A
+000A                   8     MAIN_LOOP:
+000A A3                9             INC DPTR
+000B E0               10             MOVX A, @DPTR
+000C B5F002           11             CJNE A, B, NOT_EQUAL
+000F 8004             12             SJMP LOOP
+0011                  13             NOT_EQUAL:
+0011 4002             14                     JC LOOP
+0013 F5F0             15                     MOV B, A
+0015                  16                     LOOP:
+0015 D8F3             17                             DJNZ R0, MAIN_LOOP
+0017 E5F0             18     MOV A, B
+0019 A3               19     INC DPTR
+001A F0               20     MOVX @DPTR, A
+001B 80FE             21     HERE: SJMP HERE
+                      22     END
+A51 MACRO ASSEMBLER  EXP2P2                                                               03/31/2025 13:46:14 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+HERE . . . . . . .  C ADDR   001BH   A   
+LOOP . . . . . . .  C ADDR   0015H   A   
+MAIN_LOOP. . . . .  C ADDR   000AH   A   
+NOT_EQUAL. . . . .  C ADDR   0011H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

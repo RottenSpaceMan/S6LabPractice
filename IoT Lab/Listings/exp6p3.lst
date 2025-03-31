@@ -1,0 +1,39 @@
+A51 MACRO ASSEMBLER  EXP6P3                                                               03/31/2025 17:21:28 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\exp6p3.obj
+ASSEMBLER INVOKED BY: C:\users\rotten\Desktop\C51\BIN\A51.EXE Experiment6\exp6p3.asm SET(SMALL) DEBUG PRINT(.\Listings\e
+                      xp6p3.lst) OBJECT(.\Objects\exp6p3.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000                   2             MAIN:
+0000 904200            3                     MOV DPTR, #4200H
+0003 E0                4                     MOVX A, @DPTR
+0004 5401              5                     ANL A, #01H
+0006 7004              6                     JNZ ODD
+0008 74FF              7                     MOV A, #0FFH
+000A 8002              8                     SJMP HERE
+000C                   9                     ODD:
+000C 7400             10                             MOV A, #00H
+000E 80FE             11             HERE: SJMP HERE
+                      12     END
+A51 MACRO ASSEMBLER  EXP6P3                                                               03/31/2025 17:21:28 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+HERE . . . . . . .  C ADDR   000EH   A   
+MAIN . . . . . . .  C ADDR   0000H   A   
+ODD. . . . . . . .  C ADDR   000CH   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

@@ -1,0 +1,49 @@
+A51 MACRO ASSEMBLER  EXP5P2                                                               03/31/2025 16:12:56 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\exp5p2.obj
+ASSEMBLER INVOKED BY: C:\users\rotten\Desktop\C51\BIN\A51.EXE Experiment5\exp5p2.asm SET(SMALL) DEBUG PRINT(.\Listings\e
+                      xp5p2.lst) OBJECT(.\Objects\exp5p2.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 759000            2             MOV P1, #00H
+0003                   3             LOOP:
+0003 110B              4                     ACALL DELAY
+0005 1590              5                     DEC P1
+0007 E590              6                     MOV A, P1
+0009 70F8              7                     JNZ LOOP
+000B                   8             DELAY:
+000B 79FF              9                     MOV R1, #0FFH
+000D                  10                     DEC1:
+000D 7AFF             11                             MOV R2, #0FFH
+000F                  12                             DEC2:
+000F 7BFF             13                                     MOV R3, #0FFH
+0011                  14                                     DEC3:
+0011 DBFE             15                                             DJNZ R3, DEC3
+0013 DAFA             16                                     DJNZ R2, DEC2
+0015 D9F6             17                             DJNZ R1, DEC1
+0017 22               18             RET
+                      19     END
+A51 MACRO ASSEMBLER  EXP5P2                                                               03/31/2025 16:12:56 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+DEC1 . . . . . . .  C ADDR   000DH   A   
+DEC2 . . . . . . .  C ADDR   000FH   A   
+DEC3 . . . . . . .  C ADDR   0011H   A   
+DELAY. . . . . . .  C ADDR   000BH   A   
+LOOP . . . . . . .  C ADDR   0003H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

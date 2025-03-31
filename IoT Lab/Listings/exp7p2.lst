@@ -1,0 +1,47 @@
+A51 MACRO ASSEMBLER  EXP7P2                                                               03/31/2025 17:29:48 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\exp7p2.obj
+ASSEMBLER INVOKED BY: C:\users\rotten\Desktop\C51\BIN\A51.EXE Experiment7\exp7p2.asm SET(SMALL) DEBUG PRINT(.\Listings\e
+                      xp7p2.lst) OBJECT(.\Objects\exp7p2.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000                   2             MAIN:
+0000 E550              3                     MOV A, 50H
+0002 F9                4                     MOV R1, A
+0003 75F001            5                     MOV B, #01H
+0006                   6                     FACTORIAL_LOOP:
+0006 B90102            7                             CJNE R1, #01H, MULTI
+0009 8006              8                             SJMP STORE_RES
+000B                   9                             MULTI:
+000B 19               10                                     DEC R1
+000C 89F0             11                                     MOV B, R1
+000E A4               12                                     MUL AB
+000F 80F5             13                                     SJMP FACTORIAL_LOOP
+0011                  14                     STORE_RES:
+0011 F551             15                             MOV 51H, A
+0013 80FE             16             HERE: SJMP HERE
+                      17     END
+A51 MACRO ASSEMBLER  EXP7P2                                                               03/31/2025 17:29:48 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+FACTORIAL_LOOP . .  C ADDR   0006H   A   
+HERE . . . . . . .  C ADDR   0013H   A   
+MAIN . . . . . . .  C ADDR   0000H   A   
+MULTI. . . . . . .  C ADDR   000BH   A   
+STORE_RES. . . . .  C ADDR   0011H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
