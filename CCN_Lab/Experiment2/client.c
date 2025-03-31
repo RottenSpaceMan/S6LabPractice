@@ -40,7 +40,7 @@ int main(){
     printf("Message sent to server: %s\n", buffer);
 
     // Receiver response from the server
-    read(sock, buffer, BUF_SIZE);
+    read(sock, buffer, BUF_SIZE, 0);
     printf("Message from server: %s\n", buffer);
 
     // Close the socket
