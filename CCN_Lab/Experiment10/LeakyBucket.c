@@ -24,7 +24,7 @@ int main(){
                 printf("Packet %d dropped (size: %d)\n", i, packets[i]);
             } else {
                 remainingSize += packets[i];
-                printf("Packet %d of size %d added to bucket, remaining size: %d\n", i, packets[i] ,remainingSize);
+                printf("Packet %d of size %d added to bucket, remaining size: %d\n", i, packets[i] ,buckeSize - remainingSize);
             }
             i++;
         }
@@ -40,7 +40,7 @@ int main(){
                     op = rate;
                     remainingSize -= rate;
                 }
-                printf("Packet transmitted: %d, remaining size: %d\n", op, remainingSize);
+                printf("Packet transmitted: %d, remaining size: %d\n", op, buckeSize - remainingSize);
             } else {
                 printf("Time left: %d\n", timeToTransmit - clk);
                 printf("Bucket empty\n");
