@@ -5,7 +5,7 @@
 #include <arpa/inet.h>
 
 #define PORT 8080
-#define MAX_FRAME 1
+#define MAX_FRAME 10
 
 int main(){
     int sockfd, frame = 0;
@@ -20,7 +20,7 @@ int main(){
 
     connect(sockfd, (struct sockaddr *)&serv_addr, sizeof(serv_addr));
 
-    while(frame < 10){
+    while(frame < MAX_FRAME){
         printf("Sending frame %d\n", frame);
         send(sockfd, &frame, sizeof(frame), 0);
 

@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include <string.h>
 #include <unistd.h>
+#include <string.h>
 #include <arpa/inet.h>
 
 #define PORT 8080
@@ -24,7 +24,7 @@ int main(){
 
     client_fd = accept(server_fd, (struct sockaddr *)&client_addr, &addr_len);
 
-    ssize_t bytes = recv(client_fd, buffer, sizeof(buffer), 0);
+    int bytes = recv(client_fd, buffer, sizeof(buffer), 0);
     buffer[bytes] = '\0';
     printf("Client : %s\n", buffer);
 
